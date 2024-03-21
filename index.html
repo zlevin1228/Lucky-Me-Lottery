@@ -29,9 +29,46 @@
 
   <body>
     <header>
-      <!-- place navbar here -->
+        <div class="container align-items-center">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-12 text-center">
+                    <h1>Lucky Me Lottery: Wheel Spinning!</h1>
+                </div>
+            </div>
+        </div>
     </header>
-    <main></main>
+    <main>
+        <div class="container align-items-center">
+            <div class="row justify-content-center align-items-center text-center">
+                <h5 class="py-2">Welcome to the Lucky Me Lottery! Enter a list of names and submit it to randomly select a name from the list every time you press the 'Pick a Name' button. Once the choice is displayed, it will be removed from the list and you will be able continue to get more random choices from the list you submitted. </h5>
+            </div>
+            <div class="row justify-content-center align-items-center text-center py-2">
+                <div class="col-6 text-center">
+                    <input id="nameInputBox">
+                </div>
+                <div class="col-6 text-center">
+                    <div class="btn btn-primary">
+                        <h4>Submit Names</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center py-2 mx-2">
+                <div class="bg-danger text-white rounded-3 align-items-center" id="nameDisplayDiv">
+                    <p class="py-2">List results will be displayed here</p>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center py-2 mx-2">
+                <div class="col-6 btn-success btn">
+                    <h3>Randomize!</h3>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center py-2 mx-2">
+                <div class="bg-danger text-white rounded-3 align-items-center" id="nameDisplayDiv">
+                    <p class="py-2">The Name That Was Selected:</p>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
       <!-- Grid container -->
       <div class="container p-4 pb-0">
