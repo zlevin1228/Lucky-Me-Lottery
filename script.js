@@ -1,10 +1,10 @@
 const nameArray = []; // Create a list to store names
 
-document.getElementById("nameInput")
+document.getElementById("nameInput") //allows the enter key to submit names
     .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("addNameBtn").click();
+    event.preventDefault(); //event from before is cancelled
+    if (event.keyCode === 13) { //key code is the enter key
+        document.getElementById("addNameBtn").click(); //clicks the button
     }
 });
 
@@ -46,7 +46,7 @@ function pickRandomName () {
   displayNames()
 
   if (nameArray.length === 0) {
-    alert("There is only one name left! I cannot randomize anything!")
+    alert("There is only one name left! I cannot randomize anything!") //alerts you if the next choice is not random
   }
 }
 
