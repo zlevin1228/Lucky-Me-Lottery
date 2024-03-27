@@ -1,5 +1,13 @@
 const nameArray = []; // Create a list to store names
 
+document.getElementById("nameInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addNameBtn").click();
+    }
+});
+
 function addName() {
   const nameInput = document.getElementById("nameInput"); // Get a trimmed version of the name from the input box
   const name = nameInput.value.trim();
@@ -23,4 +31,25 @@ function displayNames() {
   }
 }
 
+function pickRandomName () {
+  const randomNameDiv = document.getElementById('randomName')
+  randomNameDiv.textContent = ''
+
+
+  const randomNumber = Math.floor(Math.random() * nameArray.length)
+  const randomName = nameArray[randomNumber]
+
+  randomNameDiv.textContent = randomName
+
+  nameArray.splice(randomNumber, 1)
+
+  displayNames()
+
+  if (nameArray.length === 0) {
+    alert("There is only one name left! I cannot randomize anything!")
+  }
+}
+
 document.getElementById("addNameBtn").addEventListener("click", addName);
+
+document.getElementById("pickRandomBtn").addEventListener("click", pickRandomName);
